@@ -1,0 +1,41 @@
+.btn.gf-btn {
+  display: inline-block;
+  border-radius: 0;
+  min-width: 8em;
+  background: $primary_green;
+  color: $white;
+
+  &.btn-wide {
+    width: 100%;
+  }
+}
+
+.gf-btn.btn-tiny {
+  font-size: 70%;
+  padding: 5px 3px;
+  min-width: 0;
+  text-transform: uppercase;
+}
+
+.gf-btn.btn-red {
+  background: $primary_orange;
+  color: $white;
+}
+
+.gf-btn.btn-light {
+  border: 1px solid $primary_green;
+  color: $primary_green;
+  background: $white;
+}
+
+.gf-btn.btn-clear-danger {
+  border: 1px solid $danger;
+  color: $danger;
+  background: $white;
+}
+
+.gf-btn.btn-solid-danger {
+  border: 1px solid $danger;
+  color: $white;
+  background: $danger;
+}
