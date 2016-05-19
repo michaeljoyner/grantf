@@ -1,0 +1,33 @@
+.affiliates-index-list {
+
+  .affiliate-card {
+    margin: 1em;
+
+    .affiliate-card-image-box {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      vertical-align: top;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .affiliate-card-details {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 20px;
+
+      .affiliate-card-name {
+        margin: 0 0 0.5em;
+        color: $black;
+      }
+
+      .affiliate-card-description {
+        color: $text_grey;
+        max-width: 700px;
+      }
+    }
+  }
+}

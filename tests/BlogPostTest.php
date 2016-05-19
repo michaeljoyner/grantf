@@ -127,4 +127,49 @@ class BlogPostTest extends TestCase
         $this->assertTrue($post->hasBeenPublished());
         $this->assertNotNull($post->published_at);
     }
+
+    /**
+     *@test
+     */
+    public function an_unpublished_post_has_no_issue_id()
+    {
+        $post = factory(Post::class)->create(['title' => 'original', 'published_at' => null]);
+
+        $this->assertNull($post->issue_id);
+    }
+
+    /**
+     *@test
+     */
+    public function a_post_knows_if_it_has_been_issued_in_a_newletter()
+    {
+        $post = factory(Post::class)->create(['title' => 'original', 'published_at' => null]);
+
+        $this->assertFalse($post->hasBeenIssued());
+
+        $post->issue_id = 1;
+        $post->save();
+
+        $this->assertTrue($post->hasBeenIssued());
+    }
+
+    /**
+     *@test
+     */
+    public function it_can_return_all_unissued_posts()
+    {
+        $post = factory(\App\Blog\Post::class)->create(['issue_id' => 9]);
+        $post2 = factory(\App\Blog\Post::class)->create();
+        $post3 = factory(\App\Blog\Post::class)->create();
+
+        $unissued = Post::unissued();
+
+        $this->assertCount(2, $unissued);
+
+        $unissued->each(function($item) use ($post){
+            $this->assertNotEquals($post->id, $item->id);
+        });
+    }
+
+
 }

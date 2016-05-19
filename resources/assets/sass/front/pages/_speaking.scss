@@ -1,0 +1,41 @@
+.speaking-page {
+
+  .intro-text {
+    @include respond-to(phone) {padding: 20px 10px 0;}
+    @include respond-to(smalltablet) {padding: 20px 10px 0;}
+    @include respond-to(largetablet) {padding: 20px 10px 0;}
+  }
+
+  .two-column {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+
+    & > * {
+      flex: 1;
+    }
+
+    ul {
+      list-style-type: none;
+      font-family: $serifa;
+      font-size: 90%;
+
+      li {
+        padding: 3px 0;
+        color: $text_grey;
+      }
+    }
+
+    ul.second-half {
+      @include respond-to(phone) {display: none;}
+    }
+  }
+
+  .text-divider {
+    width: 50%;
+    margin: 1.5em auto .5em;
+    height: 1px;
+    background: $primary_green;
+  }
+}

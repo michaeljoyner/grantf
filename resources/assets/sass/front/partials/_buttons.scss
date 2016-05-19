@@ -1,0 +1,36 @@
+.gf-button {
+  background: $primary_orange;
+  color: $white;
+  font-family: $serifa;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  border-color: transparent;
+  padding: 7px;
+  transition: .1s;
+  display: inline-block;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+
+  &:hover {
+    background: $secondary_blue;
+  }
+
+  &.center-btn {
+    display: block;
+  }
+
+  &.long-btn {
+    width: 400px;
+  }
+
+  &.medium-btn {
+    width: 250px;
+  }
+
+  &.full-width-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}

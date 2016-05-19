@@ -78,7 +78,7 @@ class Post extends Model implements HasMediaConversions, SluggableInterface
 
     public function setPublishedStatus($shouldPublish)
     {
-        $this->published = $shouldPublish;
+        $shouldPublish ? $this->publish() : $this->published = 0;
         return $this->save();
     }
 
@@ -92,6 +92,16 @@ class Post extends Model implements HasMediaConversions, SluggableInterface
     public function hasBeenPublished()
     {
         return ! is_null($this->published_at);
+    }
+
+    public function hasBeenIssued()
+    {
+        return ! is_null($this->issue_id);
+    }
+
+    public static function unissued()
+    {
+        return static::whereNull('issue_id')->get();
     }
 
     protected function ensurePublishedPostHasPublishedDate()

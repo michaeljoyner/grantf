@@ -15,6 +15,8 @@ require('laravel-elixir-vueify');
 
 elixir(function(mix) {
     mix.sass('app.scss')
+        .sass('fapp.scss')
         .browserify('admin.js')
-        .version(['css/app.css', 'js/admin.js']);
+        .browserify('front.js')
+        .version(['css/app.css', 'css/fapp.css', 'js/admin.js', 'js/front.js']);
 });

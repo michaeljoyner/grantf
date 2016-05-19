@@ -1,0 +1,24 @@
+@extends('front.base')
+
+@section('content')
+    <div class="contact-page-container">
+        <div class="top-divider"></div>
+        <h1 class="main-heading">Contact me</h1>
+        <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti error est explicabo id labore laborum laudantium magnam minima nesciunt nihil numquam, possimus provident quidem ratione reiciendis sunt voluptas voluptate.</p>
+        <section class="contact-details">
+            <div class="phone">
+                <h4>Call me on:</h4>
+                <p class="body-text"><span class="phone-location">Cell: </span>+27 83 264 1978</p>
+                <p class="body-text"><span class="phone-location">Office: </span>+27 42 235 1252</p>
+            </div>
+            <div class="email">
+                <h4>Email me at:</h4>
+                <p class="body-text"><a href="mailto:grant@rhinoart.co.za">grant@rhinoart.co.za</a></p>
+                <p class="body-text"><a href="mailto:grant@amakhala.co.za">grant@amakhala.co.za</a></p>
+            </div>
+        </section>
+        <p class="intro-text orange-text">or just send a message below</p>
+
+        @include('front.partials.contactform')
+    </div>
+@endsection

@@ -1,0 +1,62 @@
+.projects-page-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .divider-line {
+    width: 100%;
+    padding-bottom: 80px;
+  }
+
+  .hero-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0 0;
+
+    @include respond-to(phone) {padding: 40px 10px 0;}
+    @include respond-to(smalltablet) {padding: 40px 10px 0;}
+    @include respond-to(largetablet) {padding: 40px 10px 0;}
+  }
+
+  .gf-button {
+    margin-top: 60px;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto 3em;
+
+  .project-card {
+    flex-basis: 50%;
+    padding: 20px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(phone) {flex-basis: 100%; padding: 20px;}
+    @include respond-to(smalltablet) {flex-basis: 100%; padding: 20px;}
+
+    .project-title.second-heading {
+      text-align: left;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .project-writeup {
+      padding: 20px 0;
+    }
+  }
+}

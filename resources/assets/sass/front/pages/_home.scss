@@ -1,0 +1,317 @@
+.home-section {
+  padding: 80px 0;
+
+  @include respond-to(phone) {padding: 30px 0;}
+  @include respond-to(smalltablet) {padding: 30px 0;}
+}
+
+#hero {
+  padding-bottom: 0;
+  .hero-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url(../../images/assets/home/white-rhino.jpg);
+    background-color: $black;
+    background-size: cover;
+    min-height: 600px;
+
+    @include respond-to(phone) {
+      background-position-x: 45%;
+      min-height: 400px;
+    }
+
+    svg {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 125px;
+
+      @include respond-to(phone) {
+        padding-top: 100px;
+        width: 70%;
+      }
+
+      path {
+        opacity: 0;
+        fill: $white;
+        animation: fadeIn .75s .5s forwards;
+      }
+
+      .path1 {
+        fill: $harsh_red;
+        animation: fadeInBranding 3s .65s forwards;
+      }
+      .path2 {
+        animation: fadeIn .75s .25s forwards;
+      }
+      .path3 {
+        animation: fadeIn .75s .375s forwards;
+      }
+      .path4 {
+        animation: fadeIn .75s .125s forwards;
+      }
+      .path5 {
+        animation: fadeIn .75s .25s forwards;
+      }
+      .path6 {
+        animation: fadeIn .75s .375s forwards;
+      }
+      .path7 {
+        animation: fadeIn .75s .5s forwards;
+      }
+    }
+  }
+
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBranding {
+  0 {opacity: 0; fill: $harsh_red;}
+15% {fill: $harsh_red;}
+  50% {opacity: 1;}
+    70% { fill: $white;}
+    100% {opacity: 1; fill: $white;}
+}
+
+
+
+#about {
+
+  .about-flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond-to(smalltablet) {
+      flex-direction: column;
+    }
+
+    @include respond-to(phone) {
+      flex-direction: column;
+    }
+
+    & > div {
+      flex: 1;
+      flex-basis: 50%;
+      order: 10;
+    }
+
+    .about-image-box.pic2 {
+      @include respond-to(smalltablet) {
+        display: none;
+      }
+
+      @include respond-to(phone) {
+        display: none;
+      }
+    }
+
+    .about-image-box.pic1 {
+      @include respond-to(smalltablet) {
+        order: 1;
+        padding: 20px 25%;
+      }
+
+      @include respond-to(phone) {
+        order: 1;
+        padding: 20px 5%;
+      }
+    }
+
+    .about-text {
+      font-size: 1.2em;
+      font-family: $serifa;
+      line-height: 1.4;
+      text-align: left;
+      padding: 0 40px;
+
+      @include respond-to(phone) {padding: 0 20px;}
+    }
+
+    .about-image-box img {
+      display: block;
+      width: 90%;
+      margin: 0 auto 2em;
+      padding: 2em 20px 0;
+    }
+  }
+}
+
+#events {
+
+  background: $beige;
+
+  .events-flex {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include respond-to(smalltablet) {
+      flex-direction: column;
+    }
+
+    @include respond-to(phone) {
+      flex-direction: column;
+    }
+
+    & > div {
+      flex: 1;
+      padding: 0 40px 0 20px;
+      border-left: 1px solid $secondary_blue;
+    }
+  }
+
+  .event-title {
+    font-family: $serifa;
+    color: $text_grey;
+    text-transform: uppercase;
+    margin: 0 0 .5em 0;
+  }
+
+  .event-date {
+    text-transform: uppercase;
+    color: $primary_blue;
+    font-family: $body_font;
+    font-weight: 700;
+    font-size: 80%;
+    margin: .5em;
+  }
+
+  .event-description {
+    @include respond-to(phone) {display: none;}
+
+    font-family: $body_font;
+    line-height: 1.5;
+    color: $black;
+  }
+}
+
+#trafficking {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+
+  img {
+    width: auto;
+    display: block;
+    max-width: 90%;
+    margin: 40px auto;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 1em auto;
+  }
+
+  .body-text {
+    padding: 10px;
+  }
+
+  .gf-button {
+    margin-top: 60px;
+  }
+}
+
+#affiliates {
+  background: $beige;
+  .affiliates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .affiliate-card {
+      flex: 0;
+      flex-basis: 140px;
+      margin: .5em;
+      padding: 1em;
+      border: 2px solid $light_grey;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        background: $light_grey;
+
+        .affiliate-description {
+          opacity: 1;
+          background: rgba(0,0,0,.8);
+        }
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .affiliate-name {
+        font-size: 80%;
+      }
+
+      .affiliate-description {
+        position: absolute;
+        transition: .8s;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        color: $white;
+        margin: 0;
+        font-size: 90%;
+      }
+    }
+  }
+}
+
+#donate {
+
+  .donate-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+      width: 200px;
+      display: block;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+
+    .donate-button {
+      width: 370px;
+      max-width: 90%;
+      margin: 1em auto;
+      background: $danger;
+      font-family: $serifa;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 2em;
+      text-align: center;
+      color: $white;
+      border-radius: 8px;
+      padding: .5em 0;
+
+      &:hover {
+        background: $harsh_red;
+      }
+    }
+  }
+}

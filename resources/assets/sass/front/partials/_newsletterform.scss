@@ -1,0 +1,70 @@
+.newsletter-form {
+  position: relative;
+
+  .error-message {
+    color: $danger;
+    font-family: $body_font;
+    display: none;
+  }
+
+  &.invalid {
+
+    .error-message {
+      display: block;
+    }
+  }
+
+  .success-panel {
+    background: $black;
+    color: $white;
+    font-family: $body_font;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: .7s;
+    transform: translate3d(-110%, 0, 0);
+  }
+
+  &.success {
+    .success-panel {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+
+    button:focus, input:focus {
+      outline: none;
+    }
+
+  }
+
+  &.spent {
+    .success-panel {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      color: $primary_orange;
+    }
+
+    button:focus, input:focus {
+      outline: none;
+    }
+
+  }
+
+  &.failed {
+    .success-panel {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      color: $danger;
+    }
+
+    button:focus, input:focus {
+      outline: none;
+    }
+
+  }
+
+
+}

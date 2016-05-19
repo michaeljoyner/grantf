@@ -17,6 +17,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/admin/events">Events</a></li>
+                <li><a href="/admin/affiliates">Affiliates</a></li>
                 <li><a href="/admin/conservation">Conservation</a></li>
                 <li><a href="/admin/speaking">Speaking</a></li>
                 <li><a href="/admin/consulting">Consulting</a></li>

@@ -27,7 +27,10 @@ class Writeup extends Model implements HasMediaConversions
             ->setManipulations(['w' => 200, 'h' => 200, 'fit' => 'crop'])
             ->performOnCollections('default');
         $this->addMediaConversion('web')
-            ->setManipulations(['w' => 800, 'h' => 600, 'fit' => 'max'])
+            ->setManipulations(['w' => 500, 'h' => 400, 'fit' => 'max'])
+            ->performOnCollections('default');
+        $this->addMediaConversion('wide')
+            ->setManipulations(['w' => 1000, 'h' => 600, 'fit' => 'max'])
             ->performOnCollections('default');
     }
 

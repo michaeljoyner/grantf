@@ -1,0 +1,46 @@
+.main-heading {
+  font-family: $serifa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 3em;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $black;
+  margin: 0 auto 80px;
+
+  @include respond-to(phone) {font-size: 2em;}
+}
+
+.intro-text {
+  font-family: $serifa;
+  font-weight: 500;
+  color: $text_grey;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.second-heading {
+  font-family: $serifa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.44em;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $black;
+}
+
+.body-text {
+  font-family: $body_font;
+  line-height: 1.5;
+  color: $black;
+}
+
+.bold-anchor {
+  font-family: $body_font;
+  font-weight: 700;
+  color: $primary_blue;
+}

@@ -32,10 +32,28 @@ $factory->define(App\Blog\Post::class, function (Faker\Generator $faker) {
 
 $factory->define(\App\Occasions\Event::class, function (Faker\Generator $faker) {
     return [
-        'title'          => $faker->sentence,
+        'title'          => $faker->words(3, true),
         'description'    => $faker->paragraph,
-        'event_time'     => $faker->sentence,
+        'event_time'     => $faker->words(3, true),
         'event_date'     => $faker->date(),
         'event_location' => $faker->city
+    ];
+});
+
+
+$factory->define(\App\Writeups\Writeup::class, function (Faker\Generator $faker) {
+    return [
+        'title'          => $faker->words(3, true),
+        'content'       => $faker->paragraphs(3, true),
+        'link'           => $faker->url,
+        'category'   => $faker->randomElement(['consultation', 'conservation', 'talks'])
+    ];
+});
+
+$factory->define(\App\Affiliate::class, function (Faker\Generator $faker) {
+    return [
+        'name'          => $faker->words(3, true),
+        'description'       => $faker->paragraph,
+        'website'           => $faker->url,
     ];
 });

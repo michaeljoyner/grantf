@@ -1,0 +1,57 @@
+.post-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .divider-line {
+    width: 100%;
+    padding-bottom: 80px;
+  }
+
+  .post-title {
+    max-width: 700px;
+    margin: 10px auto;
+  }
+
+  .post-published-date {
+    font-size: 80%;
+    font-family: $body_font;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .post-content {
+    width: 90%;
+    max-width: 800px;
+    margin: 1em auto;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+  }
+
+  .sharing-links {
+    text-align: center;
+    margin-top: 60px;
+
+    .social-icon-box {
+      display: inline-block;
+      margin: 1em;
+
+      img {
+        max-width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .gf-button.center-btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+

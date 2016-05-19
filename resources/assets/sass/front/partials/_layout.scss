@@ -1,0 +1,19 @@
+.main-page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
+  .page-content {
+    flex: 1;
+  }
+
+  .main-footer {
+    //flex-basis: 300px;
+    //margin-top: auto;
+    //
+    //@include respond-to(phone) {flex-basis: 550px;}
+    //@include respond-to(smalltablet) {flex-basis: 550px;}
+  }
+}

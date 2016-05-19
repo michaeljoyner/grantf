@@ -3979,7 +3979,7 @@ tbody.collapse.in {
       color: #fff;
       background-color: transparent; }
   .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #F36C3F;
+    color: #F5855C;
     background-color: #4fb896; }
   .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
     color: #444;
@@ -3995,7 +3995,7 @@ tbody.collapse.in {
     border-color: #5abd9d; }
   .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     background-color: #4fb896;
-    color: #F36C3F; }
+    color: #F5855C; }
   @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
       border-color: #4fb896; }
@@ -4007,7 +4007,7 @@ tbody.collapse.in {
         color: #fff;
         background-color: transparent; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-      color: #F36C3F;
+      color: #F5855C;
       background-color: #4fb896; }
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #444;
@@ -6685,7 +6685,7 @@ body.stop-scrolling {
 form.gf-form {
   padding: 0 15px; }
   form.gf-form label {
-    color: #F36C3F;
+    color: #F5855C;
     text-transform: uppercase;
     font-size: small; }
   form.gf-form input[type=text], form.gf-form input[type=email], form.gf-form input[type=password], form.gf-form textarea {
@@ -6714,7 +6714,7 @@ form.gf-form {
   text-transform: uppercase; }
 
 .gf-btn.btn-red {
-  background: #F36C3F;
+  background: #F5855C;
   color: #ffffff; }
 
 .gf-btn.btn-light {
@@ -6723,14 +6723,14 @@ form.gf-form {
   background: #ffffff; }
 
 .gf-btn.btn-clear-danger {
-  border: 1px solid #ff4850;
-  color: #ff4850;
+  border: 1px solid #FF5E5B;
+  color: #FF5E5B;
   background: #ffffff; }
 
 .gf-btn.btn-solid-danger {
-  border: 1px solid #ff4850;
+  border: 1px solid #FF5E5B;
   color: #ffffff;
-  background: #ff4850; }
+  background: #FF5E5B; }
 
 .single-image-uploader-box .profile-image {
   width: 200px;
@@ -6770,7 +6770,7 @@ form.gf-form {
   text-align: center; }
   .single-image-uploader-box .upload-message.error {
     color: #ffffff;
-    background: #ff4850; }
+    background: #FF5E5B; }
 
 .single-image-uploader-box .upload-progress-container {
   width: 100%;
@@ -6815,7 +6815,7 @@ form.gf-form {
       float: right;
       width: 20%;
       text-align: right;
-      color: #F36C3F;
+      color: #F5855C;
       font-size: 1.5em;
       margin-top: 20px; }
   .blog-post-card .blog-post-card-body {
@@ -6859,13 +6859,13 @@ form.gf-form {
     top: -.5em;
     left: 20px;
     padding: 3px 8px;
-    background: #F36C3F;
+    background: #F5855C;
     color: #ffffff;
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg); }
 
 .events-list-subheader {
-  color: #F36C3F;
+  color: #F5855C;
   padding: 30px 0; }
 
 .writeup-index-card {
@@ -6889,6 +6889,26 @@ form.gf-form {
       line-height: 100px;
       margin: 0p; }
       .writeup-index-card .writeup-index-card-detail .writeup-index-title:hover {
-        color: #F36C3F; }
+        color: #F5855C; }
+
+.affiliates-index-list .affiliate-card {
+  margin: 1em; }
+  .affiliates-index-list .affiliate-card .affiliate-card-image-box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    vertical-align: top; }
+    .affiliates-index-list .affiliate-card .affiliate-card-image-box img {
+      width: 100%; }
+  .affiliates-index-list .affiliate-card .affiliate-card-details {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px; }
+    .affiliates-index-list .affiliate-card .affiliate-card-details .affiliate-card-name {
+      margin: 0 0 0.5em;
+      color: #302C29; }
+    .affiliates-index-list .affiliate-card .affiliate-card-details .affiliate-card-description {
+      color: #888;
+      max-width: 700px; }
 
 /*# sourceMappingURL=app.css.map */

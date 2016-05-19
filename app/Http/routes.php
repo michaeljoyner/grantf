@@ -12,9 +12,18 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+Route::get('conservation', 'PagesController@conservation');
+Route::get('speaking', 'PagesController@speaking');
+Route::get('consultant', 'PagesController@consultant');
+
+Route::get('blog', 'PagesController@blog');
+Route::get('blog/{slug}', 'PagesController@post');
+
+Route::get('contact', 'ContactController@show');
+Route::post('contact', 'ContactController@postMessage');
+
+Route::post('newsletter/subscribe', 'NewsletterSubscriptionsController@subscribe');
 
 // Authentication Routes...
 Route::get('admin/login', 'Auth\AuthController@showLoginForm');
@@ -85,6 +94,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::delete('consulting/{writeup}', 'ConsultationProjectsController@delete');
 
         Route::post('writeups/{writeup}/image', 'WriteupImagesController@storeImage');
+
+        Route::get('affiliates', 'AffiliatesController@index');
+        Route::get('affiliates/{affiliate}', 'AffiliatesController@show');
+        Route::post('affiliates', 'AffiliatesController@store');
+        Route::get('affiliates/{affiliate}/edit', 'AffiliatesController@edit');
+        Route::post('affiliates/{affiliate}', 'AffiliatesController@update');
+        Route::delete('affiliates/{affiliate}', 'AffiliatesController@delete');
+        Route::post('affiliates/{affiliate}/image', 'AffiliatesController@setImage');
     });
 
 });
