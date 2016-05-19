@@ -15,6 +15,7 @@
         <hr>
     </section>
     <section class="events-list">
+        @if($events->count() > 0)
         <div class="next-event-container">
             @include('admin.partials.eventcard', ['event' => $events->first(), 'classnames' => ' event-card-large'])
         </div>
@@ -22,6 +23,7 @@
         @foreach($events->slice(1) as $event)
             @include('admin.partials.eventcard', ['event' => $event, 'classnames' => null])
         @endforeach
+        @endif
     </section>
 @endsection
 @include('admin.partials.deletemodal')
