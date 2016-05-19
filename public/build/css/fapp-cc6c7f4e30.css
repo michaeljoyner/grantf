@@ -489,19 +489,19 @@ a {
     background-image: url(../../images/assets/home/white-rhino.jpg);
     background-color: #302C29;
     background-size: cover;
-    min-height: 600px; }
+    min-height: 600px;
+    padding-top: 125px; }
     @media only screen and (max-width: 425px) {
       #hero .hero-container {
         background-position-x: 45%;
-        min-height: 400px; } }
+        min-height: 400px;
+        padding-top: 100px; } }
     #hero .hero-container svg {
       display: block;
       width: 50%;
-      margin: 0 auto;
-      padding-top: 125px; }
+      margin: 0 auto; }
       @media only screen and (max-width: 425px) {
         #hero .hero-container svg {
-          padding-top: 100px;
           width: 70%; } }
       #hero .hero-container svg path {
         opacity: 0;
@@ -597,6 +597,16 @@ a {
     -webkit-order: 10;
     -ms-flex-order: 10;
     order: 10; }
+    @media only screen and (max-width: 425px) {
+      #about .about-flex > div {
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto; } }
+    @media only screen and (min-width: 426px) and (max-width: 767px) {
+      #about .about-flex > div {
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto; } }
   @media only screen and (min-width: 426px) and (max-width: 767px) {
     #about .about-flex .about-image-box.pic2 {
       display: none; } }
@@ -682,8 +692,14 @@ a {
   #trafficking img {
     width: auto;
     display: block;
-    max-width: 90%;
+    max-width: 100%;
     margin: 40px auto; }
+  @media only screen and (max-width: 425px) {
+    #trafficking .intro-text {
+      padding: 10px; } }
+  @media only screen and (min-width: 426px) and (max-width: 767px) {
+    #trafficking .intro-text {
+      padding: 10px; } }
   #trafficking p {
     max-width: 800px;
     margin: 1em auto; }

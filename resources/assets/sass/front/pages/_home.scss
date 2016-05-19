@@ -15,20 +15,21 @@
     background-color: $black;
     background-size: cover;
     min-height: 600px;
+    padding-top: 125px;
 
     @include respond-to(phone) {
       background-position-x: 45%;
       min-height: 400px;
+      padding-top: 100px;
     }
+
 
     svg {
       display: block;
       width: 50%;
       margin: 0 auto;
-      padding-top: 125px;
 
       @include respond-to(phone) {
-        padding-top: 100px;
         width: 70%;
       }
 
@@ -102,6 +103,9 @@
       flex: 1;
       flex-basis: 50%;
       order: 10;
+
+      @include respond-to(phone) {flex-basis: auto;}
+      @include respond-to(smalltablet) {flex-basis: auto;}
     }
 
     .about-image-box.pic2 {
@@ -203,8 +207,13 @@
   img {
     width: auto;
     display: block;
-    max-width: 90%;
+    max-width: 100%;
     margin: 40px auto;
+  }
+
+  .intro-text {
+    @include respond-to(phone) {padding: 10px;}
+    @include respond-to(smalltablet) {padding: 10px;}
   }
 
   p {
