@@ -8,3 +8,4 @@ Homestead.json
 .idea/workspace.xml
 .DS_Store
 workspace.xml
+/public/media/**/*
