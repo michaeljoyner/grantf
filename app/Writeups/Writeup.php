@@ -2,13 +2,14 @@
 
 namespace App\Writeups;
 
+use App\NormalisesLinks;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 
 class Writeup extends Model implements HasMediaConversions
 {
-    use HasMediaTrait;
+    use HasMediaTrait, NormalisesLinks;
 
     protected $table = 'writeups';
 
@@ -47,4 +48,11 @@ class Writeup extends Model implements HasMediaConversions
 
         return $images->count() > 0 ? $images->first()->getUrl($conversion) : $this->defaultImageSrc;
     }
+
+    public function setLinkAttribute($link)
+    {
+        return $this->attributes['link'] = $this->normaliseLink($link);
+    }
+
+
 }

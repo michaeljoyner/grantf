@@ -187,7 +187,7 @@
     font-family: $body_font;
     font-weight: 700;
     font-size: 80%;
-    margin: .5em;
+    margin: .2em;
   }
 
   .event-description {
@@ -196,6 +196,7 @@
     font-family: $body_font;
     line-height: 1.5;
     color: $black;
+    padding-top: 15px;
   }
 }
 

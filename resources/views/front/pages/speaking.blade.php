@@ -30,7 +30,7 @@
                 <li>University of DUT, Durban</li>
             </ul>
         </div>
-        <a href="/speaking">
+        <a href="/contact">
             <div class="gf-button center-btn medium-btn">Contact Grant Now</div>
         </a>
         <section class="projects-container">

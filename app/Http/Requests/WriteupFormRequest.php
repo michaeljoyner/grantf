@@ -25,8 +25,7 @@ class WriteupFormRequest extends Request
     {
         return [
             'title' => 'required|max:255',
-            'content' => 'required',
-            'link' => 'url'
+            'content' => 'required'
         ];
     }
 }

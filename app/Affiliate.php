@@ -8,7 +8,7 @@ use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
 
 class Affiliate extends Model implements HasMediaConversions
 {
-    use HasMediaTrait;
+    use HasMediaTrait, NormalisesLinks;
 
     protected $table = 'affiliates';
 
@@ -28,6 +28,11 @@ class Affiliate extends Model implements HasMediaConversions
         $this->addMediaConversion('web')
             ->setManipulations(['w' => 500, 'h' => 400, 'fit' => 'max'])
             ->performOnCollections('default');
+    }
+
+    public function setWebsiteAttribute($link)
+    {
+        return $this->attributes['website'] = $this->normaliseLink($link);
     }
 
     public function setImage($image)

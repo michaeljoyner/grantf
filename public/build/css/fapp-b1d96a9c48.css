@@ -676,11 +676,12 @@ a {
     font-family: "lato", sans-serif;
     font-weight: 700;
     font-size: 80%;
-    margin: .5em; }
+    margin: .2em; }
   #events .event-description {
     font-family: "lato", sans-serif;
     line-height: 1.5;
-    color: #302C29; }
+    color: #302C29;
+    padding-top: 15px; }
     @media only screen and (max-width: 425px) {
       #events .event-description {
         display: none; } }

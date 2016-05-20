@@ -67,7 +67,7 @@
         <div class="donate-container">
             <p class="intro-text">Lorem ipsum dolor sit amet, argumentum quaerendum ea vim, ullum docendi qui no. Te exerci volumus vim, mel noster aliquip concludaturque ex, ei commodo theophrastus vim. Sit in summo error, eu quot democritum pro, ea.</p>
             <img src="/images/assets/home/rhinoart_logo.png" alt="call to donate image">
-            <a href="https://www.givengain.com/cause/3213/campaigns/11081/">
+            <a href="https://www.givengain.com/cause/3213/campaigns/11081/" target="_blank">
                 <div class="donate-button">Donate Now</div>
             </a>
         </div>

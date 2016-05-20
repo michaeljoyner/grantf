@@ -38,7 +38,6 @@ class AffiliatesController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255',
             'description' => 'required',
-            'website' => 'url'
         ]);
 
         $affiliate = Affiliate::create($request->only(['name', 'description', 'website']));
@@ -58,7 +57,6 @@ class AffiliatesController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255',
             'description' => 'required',
-            'website' => 'url'
         ]);
 
         $affiliate->update($request->only(['name', 'description', 'website']));
