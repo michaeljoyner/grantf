@@ -9,7 +9,7 @@
   color: $black;
   margin: 0 auto 80px;
 
-  @include respond-to(phone) {font-size: 2em;}
+  @include respond-to(phone) {font-size: 2em; margin-bottom: 40px;}
 }
 
 .intro-text {

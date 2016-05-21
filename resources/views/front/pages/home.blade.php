@@ -65,7 +65,7 @@
     <section id="donate" class="home-section">
         <h1 class="main-heading">Donate</h1>
         <div class="donate-container">
-            <p class="intro-text">Lorem ipsum dolor sit amet, argumentum quaerendum ea vim, ullum docendi qui no. Te exerci volumus vim, mel noster aliquip concludaturque ex, ei commodo theophrastus vim. Sit in summo error, eu quot democritum pro, ea.</p>
+            <p class="intro-text">The Rhino Art Campaign remains the most comprehensive children’s rhino Conservation Education programme ever undertaken. Its clear objective is to gather Hearts and Minds Messages in a call to action against Rhino poaching and  other forms of Wildlife Crime.  Our motto known as LetOur Voices be heard.</p>
             <img src="/images/assets/home/rhinoart_logo.png" alt="call to donate image">
             <a href="https://www.givengain.com/cause/3213/campaigns/11081/" target="_blank">
                 <div class="donate-button">Donate Now</div>

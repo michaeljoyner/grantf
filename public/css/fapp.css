@@ -54,7 +54,8 @@ a {
   margin: 0 auto 80px; }
   @media only screen and (max-width: 425px) {
     .main-heading {
-      font-size: 2em; } }
+      font-size: 2em;
+      margin-bottom: 40px; } }
 
 .intro-text {
   font-family: "serifa", serif;
@@ -282,20 +283,17 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 300px;
   width: 100%; }
   @media only screen and (max-width: 425px) {
     .footer-flex-box {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
-      flex-direction: column;
-      height: 450px; } }
+      flex-direction: column; } }
   @media only screen and (min-width: 426px) and (max-width: 767px) {
     .footer-flex-box {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
-      flex-direction: column;
-      height: 450px; } }
+      flex-direction: column; } }
   @media only screen and (min-width: 1000px) and (max-width: 1199px) {
     .footer-flex-box {
       width: 1000px;
@@ -309,9 +307,9 @@ a {
       width: 1000px;
       margin: 0 auto; } }
   .footer-flex-box > section {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -356,7 +354,8 @@ a {
         color: #73C7AC; }
 
 .main-footer .newsletter-box {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 20px; }
   .main-footer .newsletter-box form {
     max-width: 95%;
     width: 300px;
@@ -669,7 +668,7 @@ a {
     font-family: "serifa", serif;
     color: #888;
     text-transform: uppercase;
-    margin: 0 0 .5em 0; }
+    margin: .5em 0 .5em 0; }
   #events .event-date {
     text-transform: uppercase;
     color: #289C92;
@@ -842,9 +841,9 @@ a {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
     @media only screen and (max-width: 425px) {
       .projects-container .project-card {
         -webkit-flex-basis: 100%;

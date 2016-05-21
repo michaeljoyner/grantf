@@ -4,7 +4,7 @@
     <div class="contact-page-container">
         <div class="top-divider"></div>
         <h1 class="main-heading">Contact me</h1>
-        <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deleniti error est explicabo id labore laborum laudantium magnam minima nesciunt nihil numquam, possimus provident quidem ratione reiciendis sunt voluptas voluptate.</p>
+        <p class="intro-text">I’d love to work with you! Please feel free to get in touch with me. Bookings should be made well in advance.</p>
         <section class="contact-details">
             <div class="phone">
                 <h4>Call me on:</h4>
