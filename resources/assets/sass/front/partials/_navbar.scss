@@ -7,7 +7,11 @@
   height: 70px;
 
   @include respond-to(largetablet) {
+    flex-direction: column;
     width: 100%;
+    height: 0;
+    transition: .4s;
+    overflow: hidden;
   }
 
   @include respond-to(smalltablet) {
@@ -34,6 +38,9 @@
     @include respond-to(smalltablet) {
       height: 225px;
     }
+    @include respond-to(largetablet) {
+      height: 225px;
+    }
   }
 
   & > * {
@@ -45,6 +52,7 @@
     flex: 3;
 
     @include respond-to(smalltablet) {order: 1;}
+    @include respond-to(largetablet) {order: 1;}
     @include respond-to(phone) {order: 1;}
 
     ul {
@@ -54,6 +62,10 @@
       padding: 0;
 
       @include respond-to(smalltablet) {
+        flex-wrap: wrap;
+      }
+
+      @include respond-to(largetablet) {
         flex-wrap: wrap;
       }
 
