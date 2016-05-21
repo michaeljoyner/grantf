@@ -148,6 +148,7 @@
 
   @include respond-to(phone) {display: block;}
   @include respond-to(smalltablet) {display: block;}
+  @include respond-to(largetablet) {display: block;}
   
   svg {
     display: inline-block;
