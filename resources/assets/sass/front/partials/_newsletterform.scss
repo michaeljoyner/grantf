@@ -26,12 +26,14 @@
     opacity: 0;
     transition: .7s;
     transform: translate3d(-110%, 0, 0);
+    z-index: -100;
   }
 
   &.success {
     .success-panel {
       transform: translate3d(0, 0, 0);
       opacity: 1;
+      z-index: 100;
     }
 
     button:focus, input:focus {
@@ -45,6 +47,7 @@
       transform: translate3d(0, 0, 0);
       opacity: 1;
       color: $primary_orange;
+      z-index: 100;
     }
 
     button:focus, input:focus {
@@ -58,6 +61,7 @@
       transform: translate3d(0, 0, 0);
       opacity: 1;
       color: $danger;
+      z-index: 100;
     }
 
     button:focus, input:focus {
