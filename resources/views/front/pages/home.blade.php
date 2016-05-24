@@ -1,6 +1,7 @@
 @extends('front.base')
 
 @section('content')
+    <div class="top-divider"></div>
     <section id="hero" class="home-section">
         <div class="hero-container">
             @include('svgicons.herologo')

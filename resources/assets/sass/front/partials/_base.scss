@@ -19,6 +19,8 @@ a {
 
 .top-divider {
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   height: 1px;
   background: $primary_green;
   margin-bottom: 60px;

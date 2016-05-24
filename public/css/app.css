@@ -6698,6 +6698,17 @@ form.gf-form {
     max-width: 400px;
     margin: 0 auto; }
 
+.word-count-suggestion {
+  color: #302C29;
+  font-size: 90%;
+  padding: 4px 12px; }
+  .word-count-suggestion:before {
+    content: '( ';
+    color: #FF5E5B; }
+  .word-count-suggestion:after {
+    content: ' )';
+    color: #FF5E5B; }
+
 .btn.gf-btn {
   display: inline-block;
   border-radius: 0;

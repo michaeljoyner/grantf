@@ -12,7 +12,7 @@
                     {!! Form::text('name', null, ['class' => "form-control"]) !!}
                 </div>
                 <div class="form-group">
-                    <label for="description">Description: </label>
+                    <label for="description">Description: <span class="word-count-suggestion">Suggested word count: max 30 words</span></label>
                     {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">

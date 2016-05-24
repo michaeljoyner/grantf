@@ -1,7 +1,7 @@
-{!! Form::model($event, ['url' => $formAction, 'class' => 'form horizontal dd-form']) !!}
+{!! Form::model($event, ['url' => $formAction, 'class' => 'form horizontal gf-form']) !!}
 @include('errors')
 <div class="form-group">
-    <label for="title">Title: </label>
+    <label for="title">Title: <span class="word-count-suggestion">Suggested length: 35 characters</span></label>
     {!! Form::text('title', null, ['class' => "form-control"]) !!}
 </div>
 <div class="form-group">

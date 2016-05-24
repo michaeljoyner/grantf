@@ -24,6 +24,11 @@
     flex-direction: column;
     justify-content: center;
 
+    @include respond-to(largetablet) {flex: 1 1 33.33%;}
+    @include respond-to(desktop) {flex: 1 1 33.33%;}
+    @include respond-to(widedesktop) {flex: 1 1 33.33%;}
+    @include respond-to(superwidedesktop) {flex: 1 1 33.33%;}
+
   }
 }
 

@@ -22,3 +22,19 @@ form.gf-form {
     margin: 0 auto;
   }
 }
+
+.word-count-suggestion {
+  color: $black;
+  font-size: 90%;
+  padding: 4px 12px;
+
+  &:before {
+    content: '( ';
+    color: $danger;
+  }
+
+  &:after {
+    content: ' )';
+    color: $danger;
+  }
+}
