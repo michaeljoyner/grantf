@@ -101,7 +101,7 @@ class Post extends Model implements HasMediaConversions, SluggableInterface
 
     public static function unissued()
     {
-        return static::whereNull('issue_id')->get();
+        return static::whereNull('issue_id')->where('published', 1)->get();
     }
 
     protected function ensurePublishedPostHasPublishedDate()

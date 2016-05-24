@@ -53,6 +53,7 @@
     </section>
     <section id="affiliates" class="home-section">
         <h1 class="main-heading">Affiliates and Partners</h1>
+        <p class="intro-text">These are a few of the amazing partners and affiliates that I work alongside with. I am very proud to say that all of them have a hand in the fight against Wildlife Trafficking. Please click the box to visit their websites.</p>
         <div class="affiliates-container">
             @foreach($affiliates as $affiliate)
                 <div class="affiliate-card">

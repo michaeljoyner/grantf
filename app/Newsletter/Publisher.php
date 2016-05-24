@@ -41,7 +41,7 @@ class Publisher
     {
         Mail::send('emails.newsletter', compact('posts'), function ($message) use ($to) {
             $message->to($to)->subject('Grant Fowlds Newsletter');
-            $message->from(['Grant' => 'grant@rhinoart.org']);
+            $message->from(['grant@rhinoart.org' => 'Grant Fowlds']);
         });
     }
 }

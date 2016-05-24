@@ -768,6 +768,10 @@ a {
 
 #affiliates {
   background: #F4F2ED; }
+  #affiliates > .intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 60px; }
   #affiliates .affiliates-container {
     display: -webkit-flex;
     display: -ms-flexbox;

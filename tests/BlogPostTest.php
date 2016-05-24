@@ -158,9 +158,9 @@ class BlogPostTest extends TestCase
      */
     public function it_can_return_all_unissued_posts()
     {
-        $post = factory(\App\Blog\Post::class)->create(['issue_id' => 9]);
-        $post2 = factory(\App\Blog\Post::class)->create();
-        $post3 = factory(\App\Blog\Post::class)->create();
+        $post = factory(\App\Blog\Post::class)->create(['issue_id' => 9, 'published' => 1]);
+        $post2 = factory(\App\Blog\Post::class)->create(['published' => 1]);
+        $post3 = factory(\App\Blog\Post::class)->create(['published' => 1]);
 
         $unissued = Post::unissued();
 

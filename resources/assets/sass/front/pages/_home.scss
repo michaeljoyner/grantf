@@ -234,6 +234,13 @@
 
 #affiliates {
   background: $beige;
+
+  & > .intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+
   .affiliates-container {
     display: flex;
     flex-wrap: wrap;

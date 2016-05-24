@@ -41,7 +41,7 @@ class PagesController extends Controller
 
     public function blog()
     {
-        $posts = Post::latest()->simplePaginate(10);
+        $posts = Post::where('published', 1)->latest()->simplePaginate(10);
 
         return view('front.pages.blogindex')->with(compact('posts'));
     }

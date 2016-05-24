@@ -21,9 +21,9 @@ class NewsletterIssuesTest extends TestCase
      */
     public function it_issues_only_previously_unissued_posts()
     {
-        $post = factory(Post::class)->create(['issue_id' => 9]);
-        $post2 = factory(Post::class)->create();
-        $post3 = factory(Post::class)->create();
+        $post = factory(Post::class)->create(['issue_id' => 9, 'published' => 1]);
+        $post2 = factory(Post::class)->create(['published' => 1]);
+        $post3 = factory(Post::class)->create(['published' => 1]);
 
         $publisher = new Publisher(new MailingList());
         $issue = $publisher->sendNewIssue(Post::unissued());
