@@ -260,6 +260,7 @@
 
       &:hover {
         background: $light_grey;
+        box-shadow: 0 0 10px $primary_green;
 
         .affiliate-description {
           opacity: 1;
@@ -295,6 +296,7 @@
         margin: 0;
         font-size: 87%;
         line-height: 1.2;
+        cursor: pointer;
       }
     }
   }

@@ -24,7 +24,7 @@
                 {!! csrf_field() !!}
                 <p class="error-message">Your email address is not valid.</p>
                 <input type="email" name="email" required  placeholder="Your email address">
-                <button type="submit">Sign up</button>
+                <button type="submit" class="gf-button full-width-btn">Subscribe</button>
                 <div class="success-panel">Thanks for subscribing!</div>
             </form>
         </section>

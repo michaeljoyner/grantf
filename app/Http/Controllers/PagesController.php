@@ -52,4 +52,9 @@ class PagesController extends Controller
 
         return view('front.pages.blogpost')->with(compact('post'));
     }
+
+    public function mailingListUnsubscribe()
+    {
+        return view('front.pages.unsubscribe');
+    }
 }

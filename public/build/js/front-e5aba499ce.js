@@ -134,9 +134,59 @@ module.exports = NewsletterSignup;
 },{}],3:[function(require,module,exports){
 'use strict';
 
+var NewsletterUnsubscribe = {
+    formEl: document.querySelector('#newsletter-unsubscribe'),
+
+    handleSubmit: function handleSubmit(ev) {
+        NewsletterUnsubscribe.formEl.classList.remove('failed');
+        ev.preventDefault();
+        var req = new XMLHttpRequest();
+        var fd = new FormData(NewsletterUnsubscribe.formEl);
+
+        req.open('POST', '/newsletter/unsubscribe');
+
+        req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        req.onreadystatechange = function (ev) {
+            if (req.readyState == 4) {
+                if (req.status == 200) {
+                    NewsletterUnsubscribe.showSuccess(ev);
+                } else {
+                    NewsletterUnsubscribe.failResponse(req.status);
+                }
+            }
+        };
+        req.send(fd);
+        return false;
+    },
+    showSuccess: function showSuccess(ev) {
+        NewsletterUnsubscribe.setResponseTextAndClass('You have been unsubcribed', 'success');
+    },
+    failResponse: function failResponse(status) {
+        if (status === 400) {
+            return NewsletterUnsubscribe.setResponseTextAndClass('That email address is not on the mailing list', 'spent');
+        }
+
+        if (status === 422) {
+            return NewsletterUnsubscribe.formEl.classList.add('invalid');
+        }
+
+        NewsletterUnsubscribe.setResponseTextAndClass('Oops, something went wrong. Please try again later.', 'failed');
+    },
+    setResponseTextAndClass: function setResponseTextAndClass(message, formClass) {
+        document.querySelector('#newsletter-unsubscribe .success-panel').innerHTML = message;
+        NewsletterUnsubscribe.formEl.classList.add(formClass);
+    }
+};
+
+module.exports = NewsletterUnsubscribe;
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
 var app = app || {};
 var ContactForm = require('./components/contactform.js');
 var NewsletterSignup = require('./components/newslettersignup.js');
+var NewsletterUnsubscribe = require('./components/newsletterunsubscribe.js');
 
 app.init = function () {
     console.log('init');
@@ -170,10 +220,14 @@ if (document.querySelector('#newsletter-form')) {
     document.querySelector('#newsletter-form').addEventListener('submit', NewsletterSignup.handleSubmit, false);
 }
 
+if (document.querySelector('#newsletter-unsubscribe')) {
+    document.querySelector('#newsletter-unsubscribe').addEventListener('submit', NewsletterUnsubscribe.handleSubmit, false);
+}
+
 window.myapp = app;
 
 window.myapp.init();
 
-},{"./components/contactform.js":1,"./components/newslettersignup.js":2}]},{},[3]);
+},{"./components/contactform.js":1,"./components/newslettersignup.js":2,"./components/newsletterunsubscribe.js":3}]},{},[4]);
 
 //# sourceMappingURL=front.js.map

@@ -1,6 +1,7 @@
 let app = app || {};
 let ContactForm = require('./components/contactform.js');
 let NewsletterSignup = require('./components/newslettersignup.js');
+let NewsletterUnsubscribe = require('./components/newsletterunsubscribe.js');
 
 app.init = function() {
     console.log('init');
@@ -30,6 +31,10 @@ if(document.querySelector('#gf-contact-form')) {
 
 if(document.querySelector('#newsletter-form')) {
     document.querySelector('#newsletter-form').addEventListener('submit', NewsletterSignup.handleSubmit, false);
+}
+
+if(document.querySelector('#newsletter-unsubscribe')) {
+    document.querySelector('#newsletter-unsubscribe').addEventListener('submit', NewsletterUnsubscribe.handleSubmit, false);
 }
 
 window.myapp = app;

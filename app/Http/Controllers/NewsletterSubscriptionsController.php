@@ -21,4 +21,17 @@ class NewsletterSubscriptionsController extends Controller
 
         return response()->json('ok');
     }
+
+    public function unsubscribe(Request $request, MailingList $mailingList)
+    {
+        $this->validate($request, ['email' => 'required|email']);
+
+        if(! $mailingList->has($request->email)) {
+            return response()->json('That address is not on the list', 400);
+        }
+
+        $mailingList->remove($request->email);
+
+        return response()->json('ok');
+    }
 }

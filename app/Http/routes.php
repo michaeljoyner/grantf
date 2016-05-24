@@ -24,6 +24,9 @@ Route::get('contact', 'ContactController@show');
 Route::post('contact', 'ContactController@postMessage');
 
 Route::post('newsletter/subscribe', 'NewsletterSubscriptionsController@subscribe');
+Route::post('newsletter/unsubscribe', 'NewsletterSubscriptionsController@unsubscribe');
+
+Route::get('mailinglist/unsubscribe', 'PagesController@mailingListUnsubscribe');
 
 // Authentication Routes...
 Route::get('admin/login', 'Auth\AuthController@showLoginForm');

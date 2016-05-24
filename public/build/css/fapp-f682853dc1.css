@@ -419,11 +419,6 @@ a {
       width: 100%;
       padding-left: 8px; }
     .main-footer .newsletter-box form button {
-      height: 32px;
-      border: none;
-      width: 100%;
-      background: #F5855C;
-      color: #ffffff;
       margin-top: 10px; }
 
 #gf-contact-form {
@@ -807,7 +802,8 @@ a {
       -ms-flex-pack: justify;
       justify-content: space-between; }
       #affiliates .affiliates-container .affiliate-card:hover {
-        background: #EFEBE3; }
+        background: #EFEBE3;
+        box-shadow: 0 0 10px #73C7AC; }
         #affiliates .affiliates-container .affiliate-card:hover .affiliate-description {
           opacity: 1;
           background: rgba(0, 0, 0, 0.8); }
@@ -829,7 +825,8 @@ a {
         color: #ffffff;
         margin: 0;
         font-size: 87%;
-        line-height: 1.2; }
+        line-height: 1.2;
+        cursor: pointer; }
 
 #donate .donate-container {
   max-width: 800px;
@@ -1116,5 +1113,70 @@ a {
           -webkit-flex-basis: 100%;
           -ms-flex-preferred-size: 100%;
           flex-basis: 100%; } }
+
+.unsubscribe-page-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; }
+  .unsubscribe-page-container .intro-text {
+    max-width: 800px;
+    margin: 2em auto; }
+
+#newsletter-unsubscribe {
+  max-width: 500px;
+  width: 90%;
+  margin: 100px auto;
+  position: relative; }
+  #newsletter-unsubscribe input[type=email] {
+    border: 0;
+    border-bottom: 2px solid #73C7AC;
+    width: 100%;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    margin-bottom: 1em;
+    text-align: center; }
+  #newsletter-unsubscribe .success-panel {
+    background: #ffffff;
+    color: #302C29;
+    font-family: "lato", sans-serif;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: .7s;
+    -webkit-transform: translate3d(-110%, 0, 0);
+    transform: translate3d(-110%, 0, 0);
+    z-index: -100;
+    margin: 0;
+    padding-top: 20px;
+    font-size: 1.2em;
+    text-align: center; }
+  #newsletter-unsubscribe.success .success-panel {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    z-index: 100; }
+  #newsletter-unsubscribe.success button:focus, #newsletter-unsubscribe.success input:focus {
+    outline: none; }
+  #newsletter-unsubscribe.spent .success-panel {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #F5855C;
+    z-index: 100; }
+  #newsletter-unsubscribe.spent button:focus, #newsletter-unsubscribe.spent input:focus {
+    outline: none; }
+  #newsletter-unsubscribe.failed .success-panel {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #FF5E5B;
+    z-index: 100; }
+  #newsletter-unsubscribe.failed button:focus, #newsletter-unsubscribe.failed input:focus {
+    outline: none; }
 
 /*# sourceMappingURL=fapp.css.map */

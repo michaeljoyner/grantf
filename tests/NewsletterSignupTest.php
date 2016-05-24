@@ -27,4 +27,27 @@ class NewsletterSignupTest extends TestCase
 
         $this->assertTrue($list->has('joe@example.com'));
     }
+
+    /**
+     *@test
+     */
+    public function a_subscriber_can_unsubscribe_from_the_mailing_list()
+    {
+        $mailing = new \App\Newsletter\MailingList();
+        $mailing->add('joe@example.com');
+        $this->withoutMiddleware();
+
+        $response = $this->call('POST', '/newsletter/unsubscribe', [
+            'email' => 'joe@example.com'
+        ]);
+        $this->assertEquals(200, $response->status());
+
+        $list = new \App\Newsletter\MailingList();
+
+        $this->assertFalse($list->has('joe@example.com'));
+
+        $this->notSeeInDatabase('subscribers', [
+            'email' => 'joe@example.com'
+        ]);
+    }
 }

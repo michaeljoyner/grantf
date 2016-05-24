@@ -1,0 +1,89 @@
+.unsubscribe-page-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .intro-text {
+    max-width: 800px;
+    margin: 2em auto;
+  }
+}
+
+#newsletter-unsubscribe {
+  max-width: 500px;
+  width: 90%;
+  margin: 100px auto;
+  position: relative;
+
+  input[type=email] {
+    border: 0;
+    border-bottom: 2px solid $primary_green;
+    width: 100%;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .success-panel {
+    background: $white;
+    color: $black;
+    font-family: $body_font;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: .7s;
+    transform: translate3d(-110%, 0, 0);
+    z-index: -100;
+    margin: 0;
+    padding-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  &.success {
+    .success-panel {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      z-index: 100;
+    }
+
+    button:focus, input:focus {
+      outline: none;
+    }
+
+  }
+
+  &.spent {
+    .success-panel {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      color: $primary_orange;
+      z-index: 100;
+    }
+
+    button:focus, input:focus {
+      outline: none;
+    }
+
+  }
+
+  &.failed {
+    .success-panel {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      color: $danger;
+      z-index: 100;
+    }
+
+    button:focus, input:focus {
+      outline: none;
+    }
+
+  }
+}
