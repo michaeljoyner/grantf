@@ -59,7 +59,7 @@
                 <div class="affiliate-card">
                     <img src="{{ $affiliate->getImageSrc('thumb') }}" alt="{{ $affiliate->name }} logo">
                     <p class="affiliate-name intro-text">{{ $affiliate->name }}</p>
-                    <a href="{{ $affiliate->website }}"><p class="affiliate-description body-text">{{ $affiliate->description }}</p></a>
+                    <a href="{{ $affiliate->website }}" target="_blank"><p class="affiliate-description body-text">{{ $affiliate->description }}</p></a>
                 </div>
             @endforeach
         </div>
