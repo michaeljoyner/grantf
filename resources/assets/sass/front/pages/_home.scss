@@ -239,6 +239,21 @@
     max-width: 800px;
     margin: 0 auto;
     padding-bottom: 60px;
+
+    @include respond-to(smalltablet) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include respond-to(phone) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include respond-to(largetablet) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   .affiliates-container {
@@ -303,6 +318,23 @@
 }
 
 #donate {
+
+  .intro-text {
+    @include respond-to(smalltablet) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include respond-to(phone) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include respond-to(largetablet) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 
   .donate-container {
     max-width: 800px;

@@ -309,8 +309,16 @@ a {
 .main-footer {
   background: #302C29;
   padding-top: 10px; }
+  .main-footer .credits {
+    color: #73C7AC;
+    font-family: "lato", sans-serif;
+    text-align: center; }
+    .main-footer .credits a {
+      color: #F5855C;
+      text-decoration: none; }
   .main-footer .footer-section-header {
-    color: #F5F3DC; }
+    color: #F5F3DC;
+    margin-bottom: 0; }
 
 .footer-flex-box {
   display: -webkit-flex;
@@ -348,10 +356,7 @@ a {
     display: flex;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+    flex-direction: column; }
     @media only screen and (min-width: 768px) and (max-width: 999px) {
       .footer-flex-box > section {
         -webkit-flex: 1 1 33.33%;
@@ -374,7 +379,8 @@ a {
         flex: 1 1 33.33%; } }
 
 .footer-logo-box {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 30px; }
   .footer-logo-box img {
     width: 200px;
     max-width: 80%; }
@@ -395,6 +401,7 @@ a {
   text-align: center; }
   .main-footer .footer-quicklinks ul {
     padding: 0;
+    margin: 0;
     list-style-type: none; }
     .main-footer .footer-quicklinks ul li {
       font-size: 80%;
@@ -409,6 +416,10 @@ a {
 .main-footer .newsletter-box {
   text-align: center;
   padding-bottom: 20px; }
+  .main-footer .newsletter-box .prompt {
+    color: #F4F2ED;
+    font-family: "lato", sans-serif;
+    font-size: 80%; }
   .main-footer .newsletter-box form {
     max-width: 95%;
     width: 300px;
@@ -767,6 +778,18 @@ a {
     max-width: 800px;
     margin: 0 auto;
     padding-bottom: 60px; }
+    @media only screen and (min-width: 426px) and (max-width: 767px) {
+      #affiliates > .intro-text {
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media only screen and (max-width: 425px) {
+      #affiliates > .intro-text {
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media only screen and (min-width: 768px) and (max-width: 999px) {
+      #affiliates > .intro-text {
+        padding-left: 10px;
+        padding-right: 10px; } }
   #affiliates .affiliates-container {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -827,6 +850,21 @@ a {
         font-size: 87%;
         line-height: 1.2;
         cursor: pointer; }
+
+@media only screen and (min-width: 426px) and (max-width: 767px) {
+  #donate .intro-text {
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+@media only screen and (max-width: 425px) {
+  #donate .intro-text {
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  #donate .intro-text {
+    padding-left: 10px;
+    padding-right: 10px; } }
 
 #donate .donate-container {
   max-width: 800px;
@@ -975,7 +1013,9 @@ a {
       color: #302C29;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 6px; }
+      margin-bottom: 6px;
+      padding-left: 10px;
+      padding-right: 10px; }
     .blog-listing .post-index-card .post-published-date {
       font-size: 80%;
       font-family: "lato", sans-serif;
