@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mailing\UserMailer;
 use App\Newsletter\MailingList;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,7 @@ class NewsletterSubscriptionsController extends Controller
         return response()->json('ok');
     }
 
-    public function unsubscribe(Request $request, MailingList $mailingList)
+    public function unsubscribe(Request $request, MailingList $mailingList, UserMailer $mailer)
     {
         $this->validate($request, ['email' => 'required|email']);
 
@@ -31,6 +32,8 @@ class NewsletterSubscriptionsController extends Controller
         }
 
         $mailingList->remove($request->email);
+
+        $mailer->notifyOfUnsubscription($request->email);
 
         return response()->json('ok');
     }

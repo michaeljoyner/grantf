@@ -1251,7 +1251,8 @@ a {
   margin: 0 auto; }
   .unsubscribe-page-container .intro-text {
     max-width: 800px;
-    margin: 2em auto; }
+    margin: 2em auto;
+    padding: 10px; }
 
 #newsletter-unsubscribe {
   max-width: 500px;
