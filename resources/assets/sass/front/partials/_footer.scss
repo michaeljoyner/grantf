@@ -3,13 +3,18 @@
   padding-top: 10px;
 
   .credits {
-    color: $primary_green;
+    color: $primary_orange;
     font-family: $body_font;
     text-align: center;
+    font-size: 85%;
 
     a {
       color: $primary_orange;
       text-decoration: none;
+
+      &:hover {
+        color: $primary_green;
+      }
     }
   }
 
@@ -102,7 +107,8 @@
   .prompt {
     color: $beige;
     font-family: $body_font;
-    font-size: 80%;
+    font-size: 78%;
+    text-align: left;
   }
 
   form {

@@ -310,12 +310,15 @@ a {
   background: #302C29;
   padding-top: 10px; }
   .main-footer .credits {
-    color: #73C7AC;
+    color: #F5855C;
     font-family: "lato", sans-serif;
-    text-align: center; }
+    text-align: center;
+    font-size: 85%; }
     .main-footer .credits a {
       color: #F5855C;
       text-decoration: none; }
+      .main-footer .credits a:hover {
+        color: #73C7AC; }
   .main-footer .footer-section-header {
     color: #F5F3DC;
     margin-bottom: 0; }
@@ -419,7 +422,8 @@ a {
   .main-footer .newsletter-box .prompt {
     color: #F4F2ED;
     font-family: "lato", sans-serif;
-    font-size: 80%; }
+    font-size: 78%;
+    text-align: left; }
   .main-footer .newsletter-box form {
     max-width: 95%;
     width: 300px;
