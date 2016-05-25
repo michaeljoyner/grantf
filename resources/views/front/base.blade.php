@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('head')
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    @include('front.partials.favicons')
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="{{ elixir('css/fapp.css') }}">
