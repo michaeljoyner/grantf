@@ -1,0 +1,20 @@
+@keyframes subtleShake {
+  0% {transform: rotate(10deg);}
+  8.5% {transform: rotate(0deg);}
+  17% {transform: rotate(-10deg);}
+  25.5% {transform: rotate(0deg);}
+  34% {transform: rotate(10deg);}
+  42.5% {transform: rotate(20deg);}
+  51% {transform: rotate(10deg);}
+  59.5% {transform: rotate(0deg);}
+  68% {transform: rotate(-10deg);}
+  76.5% {transform: rotate(-20deg);}
+  85% {transform: rotate(-10deg);}
+  93.5% {transform: rotate(0deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.social-nav-link:hover {
+  animation: subtleShake 1s linear forwards;
+  opacity: .7;
+}
