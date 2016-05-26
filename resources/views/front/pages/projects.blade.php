@@ -1,5 +1,13 @@
 @extends('front.base')
 
+@section('head')
+    @include('front.partials.ogmeta', [
+        'ogImage' => '/images/assets/logo_lg.png',
+        'ogTitle' => $ogTitle,
+        'ogDescription' => $ogDescription
+    ])
+@endsection
+
 @section('content')
     <div class="projects-page-container">
         <div class="top-divider"></div>

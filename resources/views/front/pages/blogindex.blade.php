@@ -1,5 +1,13 @@
 @extends('front.base')
 
+@section('head')
+    @include('front.partials.ogmeta', [
+        'ogImage' => '/images/assets/logo_lg.png',
+        'ogTitle' => 'The Blog of Grant Fowlds',
+        'ogDescription' => 'Read through some of my latest adventures, experiences or opinions on my life as a wildlife conservationist, speaker and consultant'
+    ])
+@endsection
+
 @section('content')
     <section class="blog-index-header">
         <div class="top-divider"></div>

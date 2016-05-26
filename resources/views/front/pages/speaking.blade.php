@@ -1,5 +1,13 @@
 @extends('front.base')
 
+@section('head')
+    @include('front.partials.ogmeta', [
+        'ogImage' => '/images/assets/logo_lg.png',
+        'ogTitle' => 'Grant Fowlds - Speaker',
+        'ogDescription' => 'I relate my abundant first hand experience of growing up in a natural environment with the consequences of 21st century greed for animals in the exploding demand in all forms of animal trafficking.'
+    ])
+@endsection
+
 @section('content')
     <div class="projects-page-container speaking-page">
         <div class="top-divider"></div>

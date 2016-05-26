@@ -1,5 +1,13 @@
 @extends('front.base')
 
+@section('head')
+    @include('front.partials.ogmeta', [
+        'ogImage' => '/images/assets/logo_lg.png',
+        'ogTitle' => 'Contact Grant Fowlds',
+        'ogDescription' => 'I would love to work with you! Please feel free to get in touch with me. Bookings should be made well in advance.'
+    ])
+@endsection
+
 @section('content')
     <div class="contact-page-container">
         <div class="top-divider"></div>

@@ -29,7 +29,7 @@ class Publisher
     {
         if (!$this->mailingList->count()) {
             $this->issue = new Issue(['send_count' => 0]);
-            return;
+            return $this->issue;
         }
 
         $this->issue = Issue::create(['send_count' => $this->mailingList->count()]);

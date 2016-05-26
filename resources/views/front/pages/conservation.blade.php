@@ -1,4 +1,6 @@
 @include('front.pages.projects', [
+    'ogTitle' => 'Grant Fowlds - Conservationist',
+    'ogDescription' => 'Unbeknown to me, the real conservationist was born when I was a young boy growing up on the farm that gave birth to Amakhala Game Reserve. A combination of declining agricultural margins forced my hand into this sector through a tourism opportunity with a motto we adopted called ‘Back to Nature’',
     'title' => 'Conservation',
     'hero_image' => '/images/assets/conservation/conservation.jpg',
     'intro' => 'Unbeknown to me, the real conservationist was born when I was a young boy growing up on the farm that gave birth to Amakhala Game Reserve. A combination of declining agricultural margins forced my hand into this sector through a tourism opportunity with a motto we adopted called ‘Back to Nature’’.

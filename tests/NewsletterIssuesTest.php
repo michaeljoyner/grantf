@@ -24,8 +24,9 @@ class NewsletterIssuesTest extends TestCase
         $post = factory(Post::class)->create(['issue_id' => 9, 'published' => 1]);
         $post2 = factory(Post::class)->create(['published' => 1]);
         $post3 = factory(Post::class)->create(['published' => 1]);
-
-        $publisher = new Publisher(new MailingList());
+        $mailingList = new MailingList();
+        $mailingList->add('joe@example.com');
+        $publisher = new Publisher($mailingList);
         $issue = $publisher->sendNewIssue(Post::unissued());
 
         $issuedPosts = $issue->posts;

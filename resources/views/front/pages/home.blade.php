@@ -1,5 +1,13 @@
 @extends('front.base')
 
+@section('head')
+    @include('front.partials.ogmeta', [
+        'ogImage' => '/images/assets/logo_lg.png',
+        'ogTitle' => 'Grant Fowlds',
+        'ogDescription' => 'Hi, I am Grant Fowlds, conservationist, speaker and consultant. I have a great passion for wildlife conservation and tourism, and extensive experience in spreading awareness and in wildlife restoration and conservation projects.'
+    ])
+@endsection
+
 @section('content')
     <div class="top-divider"></div>
     <section id="hero" class="home-section">
