@@ -43,11 +43,13 @@
         </a>
         <section class="projects-container">
             @foreach($projects as $project)
-                <div class="project-card">
-                    <p class="project-title second-heading">{{ $project->title }}</p>
-                    <img src="{{ $project->getImageSrc('web') }}" alt="project image">
-                    <div class="project-writeup body-text">{!! $project->content !!}</div>
-                    <a class="bold-anchor" href="{{ $project->link }}" class="project-link">{{ $project->link }}</a>
+                <div class="project-card-wrapper">
+                    <div class="project-card">
+                        <p class="project-title second-heading">{{ $project->title }}</p>
+                        <img src="{{ $project->getImageSrc('web') }}" alt="project image">
+                        <div class="project-writeup body-text">{!! $project->content !!}</div>
+                        <a class="bold-anchor" href="{{ $project->link }}" class="project-link">{{ $project->link }}</a>
+                    </div>
                 </div>
             @endforeach
         </section>

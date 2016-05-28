@@ -1051,10 +1051,17 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 20px auto 3em; }
-  .projects-container .project-card {
+  .projects-container .project-card-wrapper {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+  .projects-container .project-card {
     padding: 20px 50px;
     display: -webkit-flex;
     display: -ms-flexbox;
