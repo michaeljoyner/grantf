@@ -23,24 +23,31 @@ class Publisher
     public function __construct(MailingList $mailingList)
     {
         $this->mailingList = $mailingList;
+        $this->issue = new Issue(['send_count' => 0]);
+    }
+
+    public function publish($posts)
+    {
+        if($this->shouldSendIssue()) {
+            return $this->sendNewIssue($posts);
+        }
+
+        return $this->issue;
     }
 
     public function sendNewIssue($posts)
     {
-        if (!$this->mailingList->count()) {
-            $this->issue = new Issue(['send_count' => 0]);
+        try{
+            $this->sendMail($this->mailingList->asArray(), $posts);
+        } catch (\Exception $e) {
             return $this->issue;
         }
+        return $this->persistIssue($posts);
+    }
 
-        $this->issue = Issue::create(['send_count' => $this->mailingList->count()]);
-
-        $posts->each(function ($post) {
-            $this->issue->posts()->save($post);
-        });
-
-        $this->sendMail($this->mailingList->asArray(), $posts);
-
-        return $this->issue;
+    private function shouldSendIssue()
+    {
+        return !! $this->mailingList->count();
     }
 
     private function sendMail($to, $posts)
@@ -49,5 +56,17 @@ class Publisher
             $message->to($to)->subject('Grant Fowlds Newsletter ' . Carbon::now()->toFormattedDateString());
             $message->from(['grant@rhinoart.org' => 'Grant Fowlds']);
         });
+    }
+
+    private function persistIssue($posts)
+    {
+        $this->issue->send_count = $this->mailingList->count();
+        $this->issue->save();
+
+        $posts->each(function ($post) {
+            $this->issue->posts()->save($post);
+        });
+
+        return $this->issue;
     }
 }

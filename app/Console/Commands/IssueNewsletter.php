@@ -42,7 +42,7 @@ class IssueNewsletter extends Command
         $posts = Post::unissued();
 
         if($posts->count() > 0) {
-            $publisher->sendNewIssue($posts);
+            $publisher->publish($posts);
             return $this->info('Delivered to '. $publisher->issue->send_count . ' addresses');
         }
 
