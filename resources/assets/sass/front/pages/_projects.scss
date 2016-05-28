@@ -40,6 +40,9 @@
     flex-basis: 50%;
     flex-grow: 0;
     flex-shrink: 0;
+
+    @include respond-to(phone) {flex-basis: 100%;}
+    @include respond-to(smalltablet) {flex-basis: 100%;}
   }
 
   .project-card {
@@ -50,8 +53,8 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    @include respond-to(phone) {flex-basis: 100%; padding: 20px;}
-    @include respond-to(smalltablet) {flex-basis: 100%; padding: 20px;}
+    @include respond-to(phone) { padding: 20px;}
+    @include respond-to(smalltablet) { padding: 20px;}
 
     .project-title.second-heading {
       text-align: left;
