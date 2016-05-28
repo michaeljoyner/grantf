@@ -32,7 +32,9 @@ html {
   height: 100%; }
 
 body {
-  height: 100%; }
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; }
 
 .main-page-wrapper {
   display: -webkit-flex;
