@@ -22,6 +22,7 @@
                 <li><a href="/admin/speaking">Speaking</a></li>
                 <li><a href="/admin/consulting">Consulting</a></li>
                 <li><a href="/admin/blog/posts">Blog</a></li>
+                <li><a href="/admin/newsletter">Newsletter</a></li>
                 @if(isset($ediblePages) && $ediblePages->count())
                     <li class="dropdown">
                         <a href="#"

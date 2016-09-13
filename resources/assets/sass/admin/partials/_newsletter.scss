@@ -1,0 +1,25 @@
+.newsletter-overview {
+
+  .shout-out {
+    color: $primary_blue;
+    font-size: 120%;
+  }
+}
+
+.recent-issues {
+
+
+}
+
+.issue-card {
+  width: 95%;
+  margin: 20px auto 20px 0;
+  max-width: 500px;
+  padding: 10px;
+  background: $beige;
+  h3 {
+    color: $primary_blue;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+}

@@ -105,6 +105,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::post('affiliates/{affiliate}', 'AffiliatesController@update');
         Route::delete('affiliates/{affiliate}', 'AffiliatesController@delete');
         Route::post('affiliates/{affiliate}/image', 'AffiliatesController@setImage');
+
+        Route::get('newsletter', 'NewsletterController@index');
     });
 
 });

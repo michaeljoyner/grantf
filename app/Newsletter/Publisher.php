@@ -52,10 +52,13 @@ class Publisher
 
     private function sendMail($to, $posts)
     {
-        Mail::send('emails.newsletter', compact('posts'), function ($message) use ($to) {
-            $message->to($to)->subject('Grant Fowlds Newsletter ' . Carbon::now()->toFormattedDateString());
-            $message->from(['grant@rhinoart.org' => 'Grant Fowlds']);
-        });
+        foreach($to as $receiver) {
+            Mail::send('emails.newsletter', compact('posts'), function ($message) use ($receiver) {
+                $message->to($receiver)->subject('Grant Fowlds Newsletter ' . Carbon::now()->toFormattedDateString());
+                $message->from(['grant@rhinoart.org' => 'Grant Fowlds']);
+            });
+        }
+
     }
 
     private function persistIssue($posts)
