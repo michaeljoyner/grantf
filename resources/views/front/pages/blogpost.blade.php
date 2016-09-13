@@ -2,7 +2,7 @@
 
 @section('head')
     @include('front.partials.ogmeta', [
-        'ogImage' => '/images/assets/logo_lg.png',
+        'ogImage' => $post->hasImages() ? $post->getFirstMediaUrl() : '/images/assets/logo_lg.png',
         'ogTitle' => $post->title,
         'ogDescription' => $post->description
     ])

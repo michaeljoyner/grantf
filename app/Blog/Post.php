@@ -76,6 +76,11 @@ class Post extends Model implements HasMediaConversions, SluggableInterface
         return $this->getMedia();
     }
 
+    public function hasImages()
+    {
+        return $this->getMedia()->count() > 0;
+    }
+
     public function setPublishedStatus($shouldPublish)
     {
         $shouldPublish ? $this->publish() : $this->published = 0;

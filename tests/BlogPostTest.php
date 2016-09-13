@@ -10,7 +10,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
  */
 class BlogPostTest extends TestCase
 {
-    use DatabaseMigrations;
+    use DatabaseMigrations, TestsImageUploads;
 
     /**
      * @test
@@ -169,6 +169,17 @@ class BlogPostTest extends TestCase
         $unissued->each(function($item) use ($post){
             $this->assertNotEquals($post->id, $item->id);
         });
+    }
+    
+    /**
+     *@test
+     */
+    public function a_blog_post_knows_if_it_has_any_images()
+    {
+        $post = factory(Post::class)->create();
+        $post->addImage($this->prepareFileUpload('tests/testpic1.png'));
+
+        $this->assertTrue($post->hasImages());
     }
 
 
