@@ -14,7 +14,7 @@ class NewsletterController extends Controller
 {
     public function index(MailingList $list)
     {
-        $issues = Issue::with('posts')->paginate(10);
+        $issues = Issue::with('posts')->latest()->paginate(10);
         $mailingList = $list->asArray();
         $unissued = Post::unissued();
 
