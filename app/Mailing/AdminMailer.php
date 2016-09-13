@@ -13,7 +13,7 @@ class AdminMailer extends AbstractMailer
 {
     public function sendSiteMessage($fields)
     {
-        $to = ['joyner.michael@gmail.com' => 'Michael Joyner'];
+        $to = ['grant@rhinoart.co.za' => 'Grant Fowlds'];
         $from = [$fields['email'] => $fields['name']];
         $view = 'emails.sitemessage';
         $subject = 'Website message from '.$fields['name'];
