@@ -34,6 +34,9 @@
     </section>
     <section id="events" class="home-section">
         <h1 class="main-heading">Upcoming Events</h1>
+        @if(! $events->count())
+            <p class="intro-text">There are no upcoming events for now, but be sure to check back again soon.</p>
+        @endif
         <div class="events-flex">
             @foreach($events as $event)
             <div>
@@ -58,6 +61,15 @@
         <a href="/conservation">
             <div class="gf-button long-btn center-btn">See Conservation Projects</div>
         </a>
+    </section>
+    <section id="video" class="home-section">
+        <h1 class="main-heading">South Africa: A Shorthand History</h1>
+        <p class="intro-text">In this video I give the viewer an interesting shorthand history of South Africa. For anyone knowing nothing or little about South Africa, this video clip serves as an introductory teaser to some of the major events and people who shaped the country.</p>
+        <div class="video-outer">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jwTP-pmOzBU" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </section>
     <section id="affiliates" class="home-section">
         <h1 class="main-heading">Affiliates and Partners</h1>
