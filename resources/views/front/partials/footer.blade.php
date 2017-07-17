@@ -6,6 +6,10 @@
         <section class="footer-social">
             <p class="footer-section-header intro-text">please follow me</p>
             @include('front.partials.sociallinks')
+            <p class="footer-section-header intro-text">Find me on Safarious</p>
+            <a class="safarious-link" href="https://beta.safarious.com/home" target="_blank">
+                <img src="/images/safarious.jpg" width="150px" alt="Safarious logo">
+            </a>
         </section>
         <section class="footer-quicklinks">
             <p class="footer-section-header intro-text">Quick links</p>
