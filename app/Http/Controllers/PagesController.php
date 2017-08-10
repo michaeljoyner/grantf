@@ -17,7 +17,7 @@ class PagesController extends Controller
     public function home()
     {
         $events = Event::upcoming()->take(3);
-        $affiliates = Affiliate::limit(10)->get();
+        $affiliates = Affiliate::latest()->get();
         return view('front.pages.home')->with(compact('events', 'affiliates'));
     }
 
