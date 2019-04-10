@@ -107,6 +107,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::post('affiliates/{affiliate}/image', 'AffiliatesController@setImage');
 
         Route::get('newsletter', 'NewsletterController@index');
+
+        Route::get('api/blog', function() {
+            return App\Blog\Post::all();
+        });
     });
 
 });
