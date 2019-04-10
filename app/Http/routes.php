@@ -12,6 +12,8 @@
 */
 
 
+use App\Blog\Post;
+
 Route::get('/', 'PagesController@home');
 Route::get('conservation', 'PagesController@conservation');
 Route::get('speaking', 'PagesController@speaking');
@@ -27,6 +29,10 @@ Route::post('newsletter/subscribe', 'NewsletterSubscriptionsController@subscribe
 Route::post('newsletter/unsubscribe', 'NewsletterSubscriptionsController@unsubscribe');
 
 Route::get('mailinglist/unsubscribe', 'PagesController@mailingListUnsubscribe');
+
+Route::get('api/blog', function() {
+    return App\Blog\Post::all();
+});
 
 // Authentication Routes...
 Route::get('admin/login', 'Auth\AuthController@showLoginForm');
@@ -108,9 +114,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
         Route::get('newsletter', 'NewsletterController@index');
 
-        Route::get('api/blog', function() {
-            return App\Blog\Post::all();
-        });
+
     });
 
 });
