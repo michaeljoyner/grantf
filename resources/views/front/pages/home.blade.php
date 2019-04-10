@@ -3,7 +3,7 @@
 @section('head')
     @include('front.partials.ogmeta', [
         'ogImage' => '/images/assets/logo_lg.png',
-        'ogTitle' => 'Grant Fowlds',
+        'ogTitle' => 'Grant Fowlds | Conservationist, Speaker and Consultant',
         'ogDescription' => 'Hi, I am Grant Fowlds, conservationist, speaker and consultant. I have a great passion for wildlife conservation and tourism, and extensive experience in spreading awareness and in wildlife restoration and conservation projects.'
     ])
 @endsection
