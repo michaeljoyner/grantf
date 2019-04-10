@@ -9,3 +9,4 @@ Homestead.json
 .DS_Store
 workspace.xml
 /public/media/**/*
+.smithy.yaml
